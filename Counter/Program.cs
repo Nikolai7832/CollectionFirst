@@ -6,7 +6,7 @@
     {
         static char[] delimeters = Enumerable.Range(0, 256) // Здесь храним разделители (среднне тире сюда не попадает,даже если прописывать в ручную)
                             .Select(x => (char)x)
-                            .Where(c => char.IsWhiteSpace(c) || char.IsPunctuation(c) || char.IsSurrogate(c) || char.IsDashPunctuation)
+                            .Where(c => char.IsWhiteSpace(c) || char.IsPunctuation(c) || char.IsSurrogate(c))
                             .ToArray();
 
         static void Main()
